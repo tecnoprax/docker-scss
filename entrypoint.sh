@@ -1,7 +1,7 @@
 #!/bin/sh 
 while(true); do
 	for ff in $(find /work -type f -iname '*.scss' -newer ~/.lastrender); do
-		f = /work/main.scss
+		f='/work/main.scss'
 		fn=$(echo $f | sed 's/.scss/.css/g' | sed 's/\/work\//\/output\//g')
 		
 		echo Rendering file: $f to $fn
